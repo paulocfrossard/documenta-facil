@@ -22,19 +22,18 @@ function getPost(titulo, conteudo) { //Gera codigo html de cada postagem
 	return cont_final;
 };
 
-function final() { //Função refeita no dia 09/11/22 as 00:00
+function final() {
 	console.log(num)
-	titulo_pag = document.getElementById('titulo_pag').value; // Pega titulo da pagina
+	titulo_pag = document.getElementById('titulo_pag').value;
 	var main_html = ["<!DOCTYPE html><html lang='pt-br'>", '</html>']
 	var body_html = ["<body>", '</body>']
 	var head_html = [];
 	var bootstrap = ['<div class="container-fluid">', '<div class="row">', "<div class='col-sm-10 col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1 col-sm-offset-1'>"]
 	
 	var post = []; //Armazena codigo gerado pela função getpost
-	var codigo_final = ""; //Cria variavel do tipo string vazia
-	var contudo = []; // Cria array responsavel pelo codigo html final
+	var contudo = []; 
+	var codigo_final = "";
 	var final = ""
-	// Define valores do <head> html
 	head_html[0] = "<head>";
 	head_html[1] = "<meta name='viewport' content='width=device-width, initial-scale=1'> <meta charset='utf-8'>";
 	head_html[2] = "<title>" + titulo_pag + "</title>"
@@ -70,31 +69,31 @@ function final() { //Função refeita no dia 09/11/22 as 00:00
 	codigo_final += main_html[1]
 	copiar = "<input type='button' class='btn btn-primary' value='Copiar' onclick='getConteudo(\"final\")'>"
 	final = "<textarea id='final' class='form-control'>" + codigo_final + "</textarea><br>" + copiar ;
-	document.getElementById('conteudo').innerHTML = final;
+	document.getElementById('corpo').innerHTML = final;
 };
 
 function posts() { //Função que gera toda parte editavel 
-	var temp = document.getElementById('num_post').value; // Pega o valor do input do numero de postagens 
+	var temp = document.getElementById('num_post').value; // Pega o numero de postagens 
 	num = Number(temp); //Transforma em um numero
-	if (isNaN(num) || num < 0 || num == 0) { //Avisa caso não seja um numero positivo
+	if (isNaN(num) || num < 0 || num == 0) { 
 		alert("Somente numeros positivos aqui!");
 	}
 	else {
-		var art_1 = [];//Aqui é impresso os valores da array para gerar um codigo html limpo
+		var conteudo = [];//Aqui é impresso os valores da array para gerar um codigo html limpo
 		var confirma = "<center><button class='btn btn-success uppercase' type='submit' onclick='final()'> gerar documentação </button></center>"
 		var art = []; //Recebe o codigo html e atribui logo em seguida um valor para cada item 				
 		var padrao = "<p>Escreva seu texto usando tags HTML</p>"; //Valor textarea
 		var titulo = "Qual o nome da ferramenta?<br><input type='text' id='titulo_pag' class='form-control margem' placeholder='Nome da ferramenta'/></center><hr>";
-		art_1 += titulo;
+		conteudo += titulo;
 		for (i = 0; i <= num - 1; i++) { //Gera a grade da documentação atribuindo uma id especifica 
 			art[i + 1] = i + 1;
 			art[i] = "<article id='art_" + art[i + 1] + "'><input type='text' class='form-control margem' id='Titulo_" + art[i + 1] + "' placeholder='Título " + art[i + 1] + "'/><div class='styles'><textarea class='form-control' placeholder='"+ padrao +"' id='cont_" + art[i + 1] + "'></textarea></div></article><br>";
 		}
 		for (i = 0; i <= num - 1; i++) { //Imprime a grade de maneira completa ao usuario, sem as "," de separação
-			art_1 += art[i];
+			conteudo += art[i];
 		}
-		art_1 += confirma;
-		document.getElementById('conteudo').innerHTML = art_1;
+		conteudo += confirma;
+		document.getElementById('corpo').innerHTML = conteudo;
 	}
 };
 function getConteudo(id){
