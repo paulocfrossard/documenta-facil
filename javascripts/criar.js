@@ -25,15 +25,14 @@ function getPost(titulo, conteudo) { //Gera codigo html de cada postagem
 function final() {
 	console.log(num)
 	titulo_pag = document.getElementById('titulo_pag').value;
-	var main_html = ["<!DOCTYPE html><html lang='pt-br'>", '</html>']
-	var body_html = ["<body>", '</body>']
-	var head_html = [];
-	var bootstrap = ['<div class="container-fluid">', '<div class="row">', "<div class='col-sm-10 col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1 col-sm-offset-1'>"]
-	
-	var post = []; //Armazena codigo gerado pela função getpost
-	var contudo = []; 
 	var codigo_final = "";
 	var final = ""
+	var main_html = ["<!DOCTYPE html><html lang='pt-br'>", '</html>']
+	var body_html = ["<body>", '</body>']
+	var bootstrap = ['<div class="container-fluid">', '<div class="row">', "<div class='col-sm-10 col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1 col-sm-offset-1'>"];
+	var post = []; //Armazena codigo gerado pela função getpost
+	var contudo = []; 
+	var head_html = [];
 	head_html[0] = "<head>";
 	head_html[1] = "<meta name='viewport' content='width=device-width, initial-scale=1'> <meta charset='utf-8'>";
 	head_html[2] = "<title>" + titulo_pag + "</title>"
@@ -49,7 +48,6 @@ function final() {
 		post[i + 1] = i + 1;
 		post[i] = getPost(document.getElementById('Titulo_' + post[i + 1]).value, document.getElementById('cont_' + post[i + 1]).value);
 	}
-
 	codigo_final += main_html[0];
 	for (i = 0; i <= [head_html.length - 1]; i++) {
 		codigo_final += head_html[i];
