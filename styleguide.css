@@ -1,0 +1,78 @@
+/* Estilos do Guia */
+body {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+input,
+textarea {
+	width: 100%;
+	max-width: 98%;
+	padding: 10px;
+	border-radius: 1px;
+}
+
+textarea {
+	min-height: 160px;
+}
+
+#conteudo {
+	background-color: #e6e2eb;
+	padding: 3%;
+	border-radius: 2px;
+}
+
+#header {
+	padding: 5px;
+	text-align: center;
+	background-color: #d13c2c;
+	height: 100%;
+	width: auto;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+#header a, #header>h1 {
+	color: #fff;
+	text-decoration: none;
+
+	text-transform: uppercase;
+}
+
+.cores_primarias div,
+.cores_secundarias div {
+	padding: 120px 10px 10px 10px;
+	text-align: center;
+	float: left;
+	margin-right: 20px;
+	color: black;
+	box-shadow: 0 -40px 0 0 white inset, 0px 0px 5px 0 rgba(0, 0, 0, .125);
+	text-transform: uppercase;
+}
+
+.formularios {
+	max-width: 500px;
+}
+
+.footer {
+	background-color: rgb(58, 58, 58);
+	position: absolute;
+	height: auto;
+	width: 96%;
+	margin: 2%;
+	border-radius: 2px;
+}
+
+.footer>.container,
+.footer>.container a {
+	color: #fff;
+	padding: 5px;
+	text-align: center;
+}
+
+.footer>.container a:hover {
+	opacity: 80%;
+}
+.margem{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
