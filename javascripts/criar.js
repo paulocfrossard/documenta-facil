@@ -40,7 +40,7 @@ function final() {
 	head_html[4] = "<link rel='stylesheet' href='https://raw.githubusercontent.com/paulocfrossard/documenta-facil/main/styleguide.css'>"; // Importa Styleguide.css github
 	head_html[5] = "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>"; // Bootstrap 3.2
 	head_html[6] = "</head>";
-	contudo[0] = "<div class='page-header'><h1>" + titulo_pag + "</h1></div>" //  Cabeçalho
+	contudo[0] = "<div class='page-header' id='header'><h1>" + titulo_pag + "</h1></div>" //  Cabeçalho
 	contudo[1] = "<section><div id='conteudo'>"
 	contudo[2] = "</div></section>"
 
