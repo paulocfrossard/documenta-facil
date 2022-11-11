@@ -35,10 +35,10 @@ textarea {
 	color: #fff;
 	text-decoration: none;
 
-	
 }
 .uppercase {
 	text-transform: uppercase;
+	text-decoration: none;
 }
 .cores_primarias div,
 .cores_secundarias div {
