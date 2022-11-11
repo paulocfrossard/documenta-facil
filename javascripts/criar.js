@@ -29,7 +29,7 @@ function final() {
 	var final = ""
 	var main_html = ["<!DOCTYPE html><html lang='pt-br'>", '</html>']
 	var body_html = ["<body>", '</body>']
-	var bootstrap = ['<div class="container-fluid">', '<div class="row">', "<div class='col-sm-10 col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1 col-sm-offset-1'>"];
+	var bootstrap = ['<div class="container-fluid">', '<div class="row">', "<div class='col-sm-10 col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1 col-sm-offset-1 corpo'>"];
 	var post = []; //Armazena codigo gerado pela função getpost
 	var contudo = []; 
 	var head_html = [];
@@ -37,11 +37,11 @@ function final() {
 	head_html[1] = "<meta name='viewport' content='width=device-width, initial-scale=1'> <meta charset='utf-8'>";
 	head_html[2] = "<title>" + titulo_pag + "</title>"
 	head_html[3] = "<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet'>" // Importa fonts Jesefin-Sans
-	head_html[4] = "<link rel='stylesheet' href='https://raw.githubusercontent.com/paulocfrossard/documenta-facil/main/styleguide.css'>"; // Importa Styleguide.css github
+	head_html[4] = "<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/paulocfrossard/documenta-facil@main/styleguide.css'>"; // Importa Styleguide.css github
 	head_html[5] = "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>"; // Bootstrap 3.2
 	head_html[6] = "</head>";
 	contudo[0] = "<div class='page-header' id='header'><h1>" + titulo_pag + "</h1></div>" //  Cabeçalho
-	contudo[1] = "<section><div id='conteudo' class='corpo'>"
+	contudo[1] = "<section><div id='conteudo'>"
 	contudo[2] = "</div></section>"
 
 	for (i = 0; i <= num - 1; i++) {
