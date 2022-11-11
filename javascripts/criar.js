@@ -17,7 +17,7 @@ var titulo_pag;
 function getPost(titulo, conteudo) { //Gera codigo html de cada postagem
 	var html_titulo, html_cont;
 	html_titulo = "<article><p><h2>" + titulo + "</h2>";
-	html_cont = "<div class='styles'>" + conteudo + "</p></div></article>"; 
+	html_cont = "<div>" + conteudo + "</p></div></article>"; 
 	cont_final = html_titulo + html_cont;
 	return cont_final;
 };
@@ -29,7 +29,7 @@ function final() {
 	var final = ""
 	var main_html = ["<!DOCTYPE html><html lang='pt-br'>", '</html>']
 	var body_html = ["<body>", '</body>']
-	var bootstrap = ['<div class="container-fluid">', '<div class="row">', "<div class='col-sm-10 col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1 col-sm-offset-1 corpo'>"];
+	var bootstrap = ['<div class="container-fluid">', '<div class="row">', "<div class='col-sm-10 col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1 col-sm-offset-1'>"];
 	var post = []; //Armazena codigo gerado pela função getpost
 	var contudo = []; 
 	var head_html = [];
@@ -37,10 +37,9 @@ function final() {
 	head_html[1] = "<meta name='viewport' content='width=device-width, initial-scale=1'> <meta charset='utf-8'>";
 	head_html[2] = "<title>" + titulo_pag + "</title>"
 	head_html[3] = "<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet'>" // Importa fonts Jesefin-Sans
-	head_html[4] = "<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/paulocfrossard/documenta-facil@main/styleguide.css'>"; // Importa Styleguide.css github
-	head_html[5] = "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>"; // Bootstrap 3.2
-	head_html[6] = "</head>";
-	contudo[0] = "<div class='page-header' id='header'><h1>" + titulo_pag + "</h1></div>" //  Cabeçalho
+	head_html[4] = "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>"; // Bootstrap 3.2
+	head_html[5] = "</head>";
+	contudo[0] = "<div class='page-header'><h1>" + titulo_pag + "</h1></div>" //  Cabeçalho
 	contudo[1] = "<section><div id='conteudo'>"
 	contudo[2] = "</div></section>"
 
@@ -85,7 +84,7 @@ function posts() { //Função que gera toda parte editavel
 		conteudo += titulo;
 		for (i = 0; i <= num - 1; i++) { //Gera a grade da documentação atribuindo uma id especifica 
 			art[i + 1] = i + 1;
-			art[i] = "<article id='art_" + art[i + 1] + "'><input type='text' class='form-control margem' id='Titulo_" + art[i + 1] + "' placeholder='Título " + art[i + 1] + "'/><div class='styles'><textarea class='form-control' placeholder='"+ padrao +"' id='cont_" + art[i + 1] + "'></textarea></div></article><br>";
+			art[i] = "<article id='art_" + art[i + 1] + "'><input type='text' class='form-control margem' id='Titulo_" + art[i + 1] + "' placeholder='Título " + art[i + 1] + "'/><div><textarea class='form-control' placeholder='"+ padrao +"' id='cont_" + art[i + 1] + "'></textarea></div></article><br>";
 		}
 		for (i = 0; i <= num - 1; i++) { //Imprime a grade de maneira completa ao usuario, sem as "," de separação
 			conteudo += art[i];

@@ -15,12 +15,6 @@ textarea {
 	min-height: 160px;
 }
 
-.corpo {
-	background-color: #e6e2eb;
-	padding: 3%;
-	border-radius: 2px;
-}
-
 #header {
 	padding: 5px;
 	text-align: center;
@@ -35,6 +29,12 @@ textarea {
 	color: #fff;
 	text-decoration: none;
 
+}
+
+.corpo {
+	background-color: #e6e2eb;
+	padding: 3%;
+	border-radius: 2px;
 }
 .uppercase {
 	text-transform: uppercase;
