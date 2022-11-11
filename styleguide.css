@@ -35,9 +35,11 @@ textarea {
 	color: #fff;
 	text-decoration: none;
 
+	
+}
+.uppercase {
 	text-transform: uppercase;
 }
-
 .cores_primarias div,
 .cores_secundarias div {
 	padding: 120px 10px 10px 10px;
@@ -46,7 +48,6 @@ textarea {
 	margin-right: 20px;
 	color: black;
 	box-shadow: 0 -40px 0 0 white inset, 0px 0px 5px 0 rgba(0, 0, 0, .125);
-	text-transform: uppercase;
 }
 
 .formularios {

@@ -39,7 +39,7 @@ function final() { //Função refeita no dia 09/11/22 as 00:00
 	head_html[1] = "<meta name='viewport' content='width=device-width, initial-scale=1'> <meta charset='utf-8'>";
 	head_html[2] = "<title>" + titulo_pag + "</title>"
 	head_html[3] = "<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet'>" // Importa fonts Jesefin-Sans
-	head_html[4] = "<link rel='stylesheet' href='*'>"; // Importa Styleguide.css github
+	head_html[4] = "<link rel='stylesheet' href='https://raw.githubusercontent.com/paulocfrossard/documenta-facil/main/styleguide.css'>"; // Importa Styleguide.css github
 	head_html[5] = "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>"; // Bootstrap 3.2
 	head_html[6] = "</head>";
 	contudo[0] = "<div class='page-header'><h1>" + titulo_pag + "</h1></div>" //  Cabeçalho
@@ -68,7 +68,7 @@ function final() { //Função refeita no dia 09/11/22 as 00:00
 	codigo_final += "</div></div></div>";
 	codigo_final += body_html[1]
 	codigo_final += main_html[1]
-	copiar = "<input type='button' class='btn btn-default' value='Copiar' onclick='getConteudo(\"final\")'>"
+	copiar = "<input type='button' class='btn btn-primary' value='Copiar' onclick='getConteudo(\"final\")'>"
 	final = "<textarea id='final' class='form-control'>" + codigo_final + "</textarea><br>" + copiar ;
 	document.getElementById('conteudo').innerHTML = final;
 };
@@ -81,7 +81,7 @@ function posts() { //Função que gera toda parte editavel
 	}
 	else {
 		var art_1 = [];//Aqui é impresso os valores da array para gerar um codigo html limpo
-		var confirma = "<center><button class='btn btn-success' type='submit' onclick='final()'> GERAR DOCUMENTAÇÃO </button></center>"
+		var confirma = "<center><button class='btn btn-success uppercase' type='submit' onclick='final()'> gerar documentação </button></center>"
 		var art = []; //Recebe o codigo html e atribui logo em seguida um valor para cada item 				
 		var padrao = "<p>Escreva seu texto usando tags HTML</p>"; //Valor textarea
 		var titulo = "Qual o nome da ferramenta?<br><input type='text' id='titulo_pag' class='form-control margem' placeholder='Nome da ferramenta'/></center><hr>";
